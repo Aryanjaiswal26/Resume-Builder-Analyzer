@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+  --bg-grad: radial-gradient(circle at top right, #1f1146, #090b1a 42%, #050509);
+  --glass-bg: linear-gradient(120deg, rgb(255 255 255 / 12%), rgb(255 255 255 / 4%));
+  --glass-border: rgb(255 255 255 / 15%);
+  --text-primary: #f8fafc;
+  --text-muted: rgb(226 232 240 / 0.8);
+  --input-bg: rgb(255 255 255 / 5%);
+  --input-border: rgb(255 255 255 / 16%);
+  --input-placeholder: rgb(226 232 240 / 0.6);
+  --secondary-bg: rgb(255 255 255 / 8%);
+  --secondary-border: rgb(255 255 255 / 18%);
+  --pill-bg: rgb(255 255 255 / 8%);
+  --pill-border: rgb(255 255 255 / 12%);
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin: 0;
+}
+
+.gradient-bg {
+  background: var(--bg-grad);
+}
+
+.theme-light {
+  --bg-grad: radial-gradient(circle at top right, #dbeafe, #f8fafc 45%, #eef2ff);
+  --glass-bg: linear-gradient(120deg, rgb(255 255 255 / 90%), rgb(248 250 252 / 85%));
+  --glass-border: rgb(148 163 184 / 28%);
+  --text-primary: #0f172a;
+  --text-muted: rgb(51 65 85 / 0.85);
+  --input-bg: rgb(255 255 255 / 95%);
+  --input-border: rgb(148 163 184 / 35%);
+  --input-placeholder: rgb(71 85 105 / 0.65);
+  --secondary-bg: rgb(255 255 255 / 90%);
+  --secondary-border: rgb(148 163 184 / 35%);
+  --pill-bg: rgb(241 245 249 / 95%);
+  --pill-border: rgb(148 163 184 / 25%);
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+}
+
+.input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text-primary);
+  padding: 0.7rem 0.9rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgb(34 211 238 / 0.8);
+  box-shadow: 0 0 0 3px rgb(34 211 238 / 0.2);
+}
+
+.input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.btn, .btn-secondary, .pill {
+  border-radius: 12px;
+  padding: 0.6rem 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn {
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  color: white;
+  box-shadow: 0 8px 24px rgb(37 99 235 / 0.25);
+}
+
+.btn:hover { transform: translateY(-1px) scale(1.02); filter: brightness(1.1); box-shadow: 0 14px 28px rgb(37 99 235 / 0.35); }
+.btn:active { transform: scale(0.95); }
+
+.btn-secondary {
+  background: var(--secondary-bg);
+  border: 1px solid var(--secondary-border);
+  color: var(--text-primary);
+}
+.btn-secondary:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 10px 24px rgb(15 23 42 / 0.4); }
+.btn-secondary:active { transform: scale(0.95); }
+
+.pill {
+  display: inline-block;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  color: var(--text-primary);
+}
+
+.field-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.spinner {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+  border: 2px solid rgb(255 255 255 / 0.35);
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.resume-template h2 {
+  letter-spacing: -0.02em;
+}
+
+.resume-template h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+}
+
+.template-modern-minimal {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.template-corporate-professional {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  border-top: 6px solid #1d4ed8;
+}
+
+.template-creative-designer {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  border-top: 6px solid #db2777;
+  background: linear-gradient(180deg, #fff, #fff7fb 55%);
+}
+
+.template-ats-friendly-clean {
+  font-family: Arial, Helvetica, sans-serif;
+  border-top: 6px solid #334155;
+}
+
+.template-bold-executive {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  border-top: 8px solid #111827;
+}
+
+.template-tech-developer {
+  font-family: "Consolas", "Segoe UI", monospace;
+  border-top: 6px solid #0e7490;
+}
+
+.template-elegant-classic {
+  font-family: "Georgia", "Times New Roman", serif;
+  border-top: 6px solid #7c2d12;
+}
